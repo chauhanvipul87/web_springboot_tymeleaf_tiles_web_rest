@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+          "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+          "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+
+	 <definition name="message/*" template="index">
+  	    <put-attribute name="title"  type="string"  value="Hello Vipul!!"/>
+    	<put-attribute name="content" value="body"/>
+     </definition>
+    
+</tiles-definitions>
+   

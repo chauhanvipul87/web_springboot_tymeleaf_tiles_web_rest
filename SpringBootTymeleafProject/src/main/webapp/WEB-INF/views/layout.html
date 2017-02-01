@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head >
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+	<div th:fragment="banner" id="bannerElement">
+           <div class="banner">
+               <span>The Thymeleaf Example</span>
+           </div>
+       </div>
+	 
+	 <!-- Header -->
+	<div id="staticHeader" th:include="fragments/header">
+	     Static Header
+	</div>
+	
+	<div th:include="this :: banner">Banner</div>
+	
+	
+	
+    <p th:text="'Hello, ' + ${msg} + '!'" />
+    
+    <div th:include="fragments/newForm :: banner">Form..</div>
+    
+    <div id="staticFooter" th:include="fragments/footer">
+	     Static Footer
+	</div>
+	
+	<hr/>
+	H<div th:replace="fragments/header">Test Header</div>E
+	F<div th:replace="fragments/footer">Test Footer</div>E
+	
+</body>
+</html>
